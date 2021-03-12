@@ -23,7 +23,9 @@ Or install it yourself as:
 ## Usage
 
 add `import { direct_upload } from "packs/direct_uploads"` to `app/javascript/packs/application.js`
+
 add `direct_upload.init()` to `app/javascript/packs/application.js`
+
 add `@import 'stylesheets/components/direct_uploads'` to `app/javascript/packs/style.sass`
 
 example: 
