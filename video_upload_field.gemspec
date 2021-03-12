@@ -5,19 +5,19 @@ require "video_upload_field/version"
 Gem::Specification.new do |spec|
   spec.name          = "video_upload_field"
   spec.version       = VideoUploadField::VERSION
-  spec.authors       = ["TODO: Write your name"]
+  spec.authors       = ["ian"]
   spec.email         = ["ian.wang@pixelforcesystems.com.au"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Add direct upload}
+  spec.description   = %q{Add direct upload}
+  spec.homepage      = "https://github.com/ian-wang0403/video_upload_field"
   spec.license       = "MIT"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/ian-wang0403/video_upload_field"
+  spec.metadata["changelog_uri"] = "https://github.com/ian-wang0403/video_upload_field"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
