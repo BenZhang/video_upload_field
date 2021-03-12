@@ -22,7 +22,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+add `import { direct_upload } from "packs/direct_uploads"` to `app/javascript/packs/application.js`
+add `direct_upload.init()` to `app/javascript/packs/application.js`
+add `@import 'stylesheets/components/direct_uploads'` to `app/javascript/packs/style.sass`
+
+example: 
+
+`= f.input :photo, as: :direct_upload, label: false, direct_upload: true`
+
+`= f.input :photo, as: :direct_upload, label: false, direct_upload: false`
 
 ## Development
 
