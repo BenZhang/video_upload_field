@@ -42,9 +42,13 @@ to `app/javascript/packs/style.sass`
 
 example: 
 
-`= f.input :photo, as: :direct_upload, label: false, direct_upload: true`
+```ruby
+= f.input :photo, as: :direct_upload, label: false, direct_upload: true
+```
 
-`= f.input :photo, as: :direct_upload, label: false, direct_upload: false`
+```ruby
+= f.input :photo, as: :direct_upload, label: false, direct_upload: false
+```
 
 ## Development
 
