@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'video_upload_field', github: 'https://github.com/ian-wang0403/video_upload_field', branch: 'master' 
+gem 'video_upload_field', github: 'ian-wang0403/video_upload_field', branch: 'master' 
 ```
 
 And then execute:
