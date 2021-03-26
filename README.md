@@ -22,6 +22,16 @@ Or install it yourself as:
 
 ## Usage
 
+Generate assets files for direct uploads:
+    ```
+    $ rails generate upload_assets_generator:install
+    ```
+```
+  create  app/javascript/controllers/direct_uploader_controller.js
+  create  app/javascript/packs/custom_uploader.js
+  create  app/javascript/packs/direct_uploads.js
+  create  app/assets/stylesheets/components/direct_uploads.sass
+```
 add 
 ```javascript
 import { direct_upload } from "packs/direct_uploads"
