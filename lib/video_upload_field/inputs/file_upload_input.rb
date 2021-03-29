@@ -15,6 +15,8 @@ module VideoUploadField
 
         upload_text = options[:upload_text] || "Upload #{reflection_or_attribute_name.to_s.titleize}"
 
+        #TODO
+        #Check content type
         object_image_url = if options[:display_image_url]
                             options[:display_image_url]
                            else
