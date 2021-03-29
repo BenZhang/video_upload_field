@@ -1,4 +1,4 @@
-include ActionView::Helpers::UrlHelper
+include Rails.application.routes.url_helpers
 
 module VideoUploadField
   module Inputs
@@ -15,8 +15,14 @@ module VideoUploadField
 
         upload_text = options[:upload_text] || "Upload #{reflection_or_attribute_name.to_s.titleize}"
 
+        object_image_url = if options[:display_image_url]
+                            options[:display_image_url]
+                           else
+                            "#{object.try(reflection_or_attribute_name.to_sym).try(:attached?) ? rails_representation_url(object.try(reflection_or_attribute_name.to_sym).variant(resize: '500x300>'), only_path: true) : ''}"
+                           end
+
         "<div class='upload-wrapper'>
-          <div class='uploaded-container' style='background-image: url(\"#{object.try(reflection_or_attribute_name.to_sym).try(:attached?) ? url_for(object.try(reflection_or_attribute_name.to_sym).try(:variant, {resize: '300x300>'})) : ''}\")'></div>
+          <div class='uploaded-container' style='background-image: url(#{object_image_url})'></div>
           <div class='upload-container' data-controller='direct-uploader'>
             <label>
               <div class='upload-text'>#{upload_text}</div>
