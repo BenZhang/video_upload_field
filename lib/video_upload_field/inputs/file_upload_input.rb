@@ -15,12 +15,18 @@ module VideoUploadField
 
         upload_text = options[:upload_text] || "Upload #{reflection_or_attribute_name.to_s.titleize}"
 
-        #TODO
-        #Check content type
         object_image_url = if options[:display_image_url]
                             options[:display_image_url]
                            else
-                            "#{object.try(reflection_or_attribute_name.to_sym).try(:attached?) ? rails_representation_url(object.try(reflection_or_attribute_name.to_sym).variant(resize: '500x300>'), only_path: true) : ''}"
+                             if object.try(reflection_or_attribute_name.to_sym).try(:attached?) && object.try(reflection_or_attribute_name.to_sym).blob.content_type != 'application/pdf'
+                               if object.try(reflection_or_attribute_name.to_sym).previewable?
+                                 rails_representation_url(object.try(reflection_or_attribute_name.to_sym).preview(resize_to_limit: [500, 300]).processed.image.variant(resize: '500x300>'), only_path: true)
+                               else
+                                 rails_representation_url(object.try(reflection_or_attribute_name.to_sym).variant(resize: '500x300>'), only_path: true)
+                               end
+                             else
+                               ""
+                             end
                            end
 
         "<div class='upload-wrapper'>
