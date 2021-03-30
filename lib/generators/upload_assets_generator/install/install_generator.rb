@@ -8,7 +8,7 @@ module UploadAssetsGenerator
         copy_file "javascript/packs/custom_uploader.js", "app/javascript/packs/custom_uploader.js"
         copy_file "javascript/packs/direct_uploads_listener.js", "app/javascript/packs/direct_uploads_listener.js"
         copy_file "javascript/packs/instant_upload_initializer.js", "app/javascript/packs/instant_upload_initializer.js"
-        copy_file "assets/stylesheets/components/direct_uploads.sass", "app/assets/stylesheets/components/direct_uploads.sass"
+        copy_file "assets/stylesheets/components/upload_fields.sass", "app/assets/stylesheets/components/upload_fields.sass"
       end
     end
   end
