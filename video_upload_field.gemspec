@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.add_dependency 'rails', '~> 6.0.3'
+  spec.add_dependency 'rails', '~> 6.0.3.5'
   spec.add_dependency 'simple_form', '~> 5.0.2'
   spec.add_dependency 'mini_magick', '~> 4.8'
 
