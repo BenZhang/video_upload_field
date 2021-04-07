@@ -33,7 +33,7 @@ module VideoUploadField
                              end
                            end
 
-        "<div class='upload-wrapper'>
+        "<div class='upload-wrapper #{options[:class]}'>
           <div class='upload-cover-container' style='background-image: url(#{object_image_url});'></div>
           <div class='upload-input-container'>
             <label>

@@ -1,8 +1,35 @@
+.upload-wrapper
+  width: 200px
+  // height: 300px
+  &.large
+    width: 500px
+  &.medium
+    width: 200px
+  &.small
+    width: 100px
+  .upload-cover-container
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 100%
+    padding-bottom: 60%
+    // height: 70%
+  .upload-input-container
+    margin-top: 20px
+    height: auto
+    > label
+      .button
+      .direct-upload
+        width: 100%
+        .direct-upload__filename
+          display: flex
+          justify-content: center
+
 .direct-upload
   display: inline-block;
   position: relative;
   padding: 2px 4px;
-  margin: 0 3px 3px 0;
+  margin: 1rem 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   font-size: 11px;
@@ -29,6 +56,3 @@
 
 input[type=file][data-direct-upload-url][disabled]
   display: none;
-.upload-cover-container
-  width: 500px
-  height: 300px

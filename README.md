@@ -34,6 +34,12 @@ Generate assets files for direct uploads:
 ```
 add 
 ```javascript
+config.custom_inputs_namespaces << "VideoUploadField::Inputs"
+``` 
+to `simple_form.rb`
+
+add 
+```javascript
 import { direct_uploads_listener } from "packs/direct_uploads_listener"
 ``` 
 to `app/javascript/packs/application.js`
