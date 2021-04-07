@@ -22,32 +22,42 @@ Or install it yourself as:
 
 ## Usage
 
+Generate assets files for direct uploads:
+    ```
+    $ rails generate upload_assets_generator:install
+    ```
+```
+  create  app/javascript/packs/custom_uploader.js
+  create  app/javascript/packs/direct_uploads.js
+  create  app/javascript/packs/instant_upload_initializer.js
+  create  app/assets/stylesheets/components/upload_fields.sass
+```
 add 
 ```javascript
-import { direct_upload } from "packs/direct_uploads"
+import { direct_uploads_listener } from "packs/direct_uploads_listener"
 ``` 
 to `app/javascript/packs/application.js`
 
 add
 ```javascript
-direct_upload.init()
+direct_uploads_listener.init();
 ```
 to `app/javascript/packs/application.js`
 
 add
 ```css
-@import 'stylesheets/components/direct_uploads'
+@import 'stylesheets/components/upload_fields'
 ```
 to `app/javascript/packs/style.sass`
 
 example: 
 
 ```ruby
-= f.input :photo, as: :direct_upload, label: false, direct_upload: true
+= f.input :photo, as: :file_upload, label: false, direct_upload: true, display_image_url: 'https://www.google.com/example.jpg', upload_text: 'Button Display Text'
 ```
 
 ```ruby
-= f.input :photo, as: :direct_upload, label: false, direct_upload: false
+= f.input :photo, as: :file_upload, label: false
 ```
 
 ## Development
