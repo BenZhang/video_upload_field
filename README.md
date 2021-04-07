@@ -32,7 +32,6 @@ Generate assets files for direct uploads:
   create  app/javascript/packs/instant_upload_initializer.js
   create  app/assets/stylesheets/components/upload_fields.sass
 ```
-
 add 
 ```javascript
 config.custom_inputs_namespaces << "VideoUploadField::Inputs"
